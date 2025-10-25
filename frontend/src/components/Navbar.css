@@ -1,0 +1,39 @@
+/* frontend/src/components/Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-purple); /* From your index.css */
+  text-decoration: none;
+}
+.navbar-links a, .navbar-links button {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: 500;
+  cursor: pointer;
+}
+.nav-btn, .nav-btn-primary {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: var(--font-main);
+  font-size: 1rem;
+}
+.nav-btn {
+  background: #f0f0f0;
+  color: var(--color-dark);
+}
+.nav-btn-primary {
+  background: var(--color-purple);
+  color: #fff;
+}
