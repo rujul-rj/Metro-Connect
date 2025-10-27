@@ -1,0 +1,38 @@
+/* frontend/src/components/StationHub.css */
+
+.station-hub {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.station-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.station-card {
+  background: var(--bg-card); /* Use variable */
+  color: var(--text-secondary); /* Use variable */
+  border-radius: 8px;
+  box-shadow: var(--shadow-light); /* Use variable */
+  padding: 20px;
+  border: 1px solid var(--border-color); /* Use variable */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.2s ease;
+}
+
+.station-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-medium); /* Use variable */
+}
+
+.station-card h3 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  color: var(--text-primary); /* Use variable */
+  
+  /* border-bottom is applied inline in StationHub.js 
+     and will use --color-purple and --color-green,
+     which is great for color variety! */
+}

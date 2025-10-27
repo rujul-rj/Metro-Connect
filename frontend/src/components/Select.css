@@ -1,0 +1,58 @@
+/* frontend/src/components/Select.css */
+
+.custom-select-wrapper {
+  margin-bottom: 1.5rem; /* Consistent spacing with other form elements */
+}
+
+.custom-select-wrapper label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.custom-select-container {
+  position: relative; /* Needed for absolute positioning of the arrow */
+}
+
+.custom-select-input {
+  /* Reset appearance to allow custom styling */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Style like other inputs */
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 0.75rem; /* Add padding-right for arrow space */
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.custom-select-input:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2); /* Orange shadow */
+}
+
+/* Custom Arrow */
+.custom-select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 1rem; /* Position inside the padding */
+  transform: translateY(-50%);
+  pointer-events: none; /* Make it click-through */
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  transition: color 0.2s ease;
+}
+
+/* Change arrow color on focus */
+.custom-select-input:focus + .custom-select-arrow {
+  color: var(--color-primary);
+}

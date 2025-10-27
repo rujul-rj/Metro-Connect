@@ -1,0 +1,129 @@
+/* frontend/src/components/BookingPage.css */
+
+.booking-page h2 {
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  display: flex; /* Align icon and text */
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and text */
+}
+
+/* Grid layout for tickets */
+.bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid */
+  gap: 1.5rem;
+}
+
+/* Styling for the new ticket card */
+.pretty-ticket-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--border-color);
+  overflow: hidden; /* Important for border effect */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover */
+}
+
+.ticket-main-info {
+  background-color: var(--color-primary); /* Use theme orange */
+  color: white;
+  padding: 1.5rem;
+}
+
+.ticket-stations {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.ticket-stations:last-child {
+  margin-bottom: 0;
+}
+
+.station-label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  min-width: 50px; /* Align station names */
+}
+
+.station-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.ticket-details {
+  padding: 1.5rem;
+  background: var(--bg-card); /* Ensure contrast in dark mode */
+  border-top: 1px dashed var(--border-color); /* Separator */
+  display: grid;
+  gap: 0.75rem; /* Space between detail items */
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.detail-item span {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Styling for the "No bookings" message */
+.no-bookings {
+  text-align: center;
+  padding: 3rem;
+  background: var(--bg-card);
+  border-radius: 8px;
+  border: 1px dashed var(--border-color);
+  color: var(--text-secondary);
+}
+
+.no-bookings p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Re-use button styles from home page */
+.no-bookings .btn-primary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  background: var(--color-primary);
+  color: white;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.no-bookings .btn-primary:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+.loading-message {
+  font-style: italic;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 2rem;
+}
+
+.page-error {
+  color: #dc3545; /* Red for errors */
+  background-color: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.2);
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+}

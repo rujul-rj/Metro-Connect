@@ -1,0 +1,62 @@
+/* frontend/src/components/LiveMapPage.css */
+
+.map-page h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.map-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  height: 70vh; /* Match MapContainer style */
+  width: 100%;
+  overflow: hidden;
+}
+
+.leaflet-container {
+  border-radius: 8px;
+  background-color: var(--bg-color);
+}
+
+/* --- SIMPLE TOOLTIP STYLES --- */
+
+.station-label-tooltip {
+  /* Remove default Leaflet background/border/shadow */
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  /* Style the text */
+  color: var(--text-secondary) !important; /* Use theme text color */
+  font-size: 9px !important;
+  font-weight: 500 !important;
+  padding: 0 3px !important; /* Minimal padding */
+  margin: 0 !important;
+  white-space: nowrap;
+
+  /* Make visible by default */
+  opacity: 0.9 !important; /* Slightly transparent */
+  visibility: visible !important;
+
+  /* Remove transform and transition */
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Hide the tooltip arrow */
+.station-label-tooltip .leaflet-tooltip-tip {
+  display: none !important;
+}
+
+/* Optional hover style - make text darker on hover */
+.leaflet-marker-icon:hover + .station-label-tooltip,
+.leaflet-clickable:hover + .station-label-tooltip {
+    color: var(--text-primary) !important;
+    opacity: 1 !important;
+    font-weight: 600 !important;
+}
+
+/* --- END OF TOOLTIP STYLES --- */

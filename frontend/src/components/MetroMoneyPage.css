@@ -1,0 +1,84 @@
+/* frontend/src/components/MetroMoneyPage.css */
+
+.money-page { max-width: 600px; margin: 2rem auto; display: grid; gap: 2rem; }
+.balance-card { background: var(--color-primary); color: white; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: var(--shadow-medium); margin-bottom: 0; /* Removed bottom margin as grid handles gap */ }
+.balance-card h3 { margin: 0; font-weight: 500; opacity: 0.9; font-size: 1.1rem; }
+.balance-card h1 { margin: 0.5rem 0 0; font-size: 3.5rem; font-weight: 700; min-height: 60px; }
+.money-form { background: var(--bg-card); padding: 2rem; border-radius: 8px; box-shadow: var(--shadow-light); border: 1px solid var(--border-color); }
+.money-form h2 { text-align: center; margin-top: 0; color: var(--text-primary); margin-bottom: 0.5rem; }
+.money-form p { text-align: center; color: var(--text-secondary); margin-bottom: 2rem; }
+.amount-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+.amount-btn { padding: 1rem; font-size: 1.1rem; font-weight: 600; border: 2px solid var(--border-color); background: transparent; color: var(--text-secondary); border-radius: 4px; cursor: pointer; transition: all 0.2s ease; }
+.amount-btn:hover:not(.active) { border-color: var(--color-primary); color: var(--color-primary); transform: translateY(-2px); }
+.amount-btn.active { background: var(--color-primary); color: white; border-color: var(--color-primary); transform: scale(1.05); }
+.amount-btn.withdraw.active { background: #dc3545; border-color: #dc3545; }
+.form-btn { width: 100%; padding: 1rem; font-size: 1.1rem; font-weight: 600; color: white; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.2s, transform 0.2s; }
+.form-btn:hover:not(:disabled) { transform: translateY(-2px); }
+.form-btn:disabled { background: var(--text-secondary); opacity: 0.7; cursor: not-allowed; transform: none; }
+.add-money-btn { background: var(--color-success); }
+.add-money-btn:hover:not(:disabled) { background: var(--color-success-hover); }
+.withdraw-money-btn { background: #dc3545; }
+.withdraw-money-btn:hover:not(:disabled) { background: #c82333; }
+.form-error { color: #dc3545; text-align: center; margin-top: 1.5rem; font-weight: 600; }
+.form-error.no-margin { margin-top: 0.5rem; }
+.form-success { color: var(--color-success); text-align: center; margin-top: 1.5rem; font-weight: 600; }
+
+/* --- Funny Actions Section Styles --- */
+.funny-actions { border-top: 2px dashed var(--border-color); margin-top: 0; /* Grid handles gap */ padding-top: 2rem; }
+.funny-actions h2 { color: var(--color-secondary); }
+.funny-actions p { font-size: 0.9rem; font-style: italic; }
+.funny-buttons-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; margin-top: 1.5rem; }
+.funny-btn { background-color: var(--bg-input); color: var(--text-secondary); border: 1px solid var(--border-color); font-size: 0.9rem !important; padding: 0.6rem !important; display: flex; align-items: center; justify-content: center; gap: 0.4rem; }
+.funny-btn:hover:not(:disabled) { background-color: var(--bg-color); color: var(--text-primary); border-color: var(--text-secondary); transform: translateY(-2px); }
+.funny-btn.donate { background-color: rgba(220, 53, 69, 0.1); color: #dc3545; border-color: rgba(220, 53, 69, 0.3); }
+.funny-btn.donate:hover:not(:disabled) { background-color: rgba(220, 53, 69, 0.2); border-color: #dc3545; }
+.funny-actions .loading-message.small { font-size: 0.9rem; margin-top: 1rem; text-align: center; color: var(--text-secondary); font-style: italic; }
+/* --- End Funny Actions --- */
+/* Add these NEW/UPDATED styles to the end of frontend/src/components/MetroMoneyPage.css */
+
+/* --- BIGGER Explosion Animation Styles --- */
+
+.explosion-overlay {
+  position: fixed; /* Fixed to viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center the particles origin */
+  align-items: center;     /* Center the particles origin */
+  pointer-events: none; /* Allows clicks to pass through */
+  z-index: 2000; /* Ensure it's above everything else */
+  overflow: hidden; /* Hide particles outside viewport */
+}
+
+.explosion-particle {
+  position: absolute;
+  background-color: var(--color); /* Set via inline style */
+  border-radius: 50%;
+  opacity: 0;
+  /* Apply animation */
+  animation: explode-big 2.5s ease-out forwards var(--delay); /* Longer duration */
+  /* Custom properties set by JavaScript */
+  width: var(--size);
+  height: var(--size);
+}
+
+/* Updated Keyframes */
+@keyframes explode-big {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0) rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1.2) rotate(var(--angle)); /* Scale up more, start rotating */
+  }
+  100% {
+    opacity: 0;
+    /* Translate further, scale down less, keep rotating */
+    transform: translate(var(--x), var(--y)) scale(0.3) rotate(calc(var(--angle) * 2));
+  }
+}
+
+/* --- End Explosion Animation Styles --- */
