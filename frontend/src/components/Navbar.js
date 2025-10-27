@@ -1,4 +1,5 @@
 // frontend/src/components/Navbar.js
+<<<<<<< HEAD
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -36,6 +37,32 @@ function Navbar() {
         ) : (
           <>
             {/* Logged Out Links */}
+=======
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import './Navbar.css'; // We'll create this CSS file
+
+function Navbar() {
+  const { token, logout } = useAuth();
+
+  return (
+    <nav className="navbar">
+      <Link to="/" className="navbar-brand">
+        Namma Metro Portal
+      </Link>
+      <div className="navbar-links">
+        {token ? (
+          // If logged in
+          <>
+            <Link to="/profile">Profile</Link> {/* Placeholder for later */}
+            <button onClick={logout} className="nav-btn">Logout</button>
+          </>
+        ) : (
+          // If logged out
+          <>
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1
             <Link to="/login">Login</Link>
             <Link to="/register" className="nav-btn-primary">Register</Link>
           </>

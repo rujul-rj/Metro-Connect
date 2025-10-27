@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* frontend/src/index.css */
 
 /* 1. Define all variables for Light Mode */
@@ -66,21 +67,29 @@ body.dark {
 
 /* 3. Apply global styles */
 body {
+=======
+body {
+  margin: 0;
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+<<<<<<< HEAD
   
   background-color: var(--bg-color);
   color: var(--text-primary);
   transition: background-color 0.2s ease, color 0.2s ease;
+=======
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+<<<<<<< HEAD
 
 /* Base link styling */
 a {
@@ -90,4 +99,30 @@ a {
 }
 a:hover {
   color: var(--color-primary); /* Use main orange on hover */
+=======
+/* Import the font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --font-main: 'Montserrat', sans-serif;
+  --color-purple: #5F259F;
+  --color-green: #49883E;
+  --color-yellow: #FED100;
+  --color-red: #D9232D;
+  --color-dark: #212121;
+  --color-light-gray: #f4f4f4;
+}
+
+body {
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1
 }

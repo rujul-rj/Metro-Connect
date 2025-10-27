@@ -1,6 +1,9 @@
 const router = require('express').Router();
+<<<<<<< HEAD
 const express = require('express');
 const getFare = require('../data/fareMatrix.js'); // <-- This line is fixed
+=======
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1
 let Station = require('../models/station.model');
 
 // GET: Fetch all stations
@@ -10,7 +13,11 @@ router.route('/').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+<<<<<<< HEAD
 // POST: Add a new station  
+=======
+// POST: Add a new station
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1
 router.route('/add').post((req, res) => {
   const { name, line, facilities, shops, crowdLevel } = req.body;
 
@@ -36,6 +43,7 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+<<<<<<< HEAD
 // @desc    Calculate fare between two stations
 // @route   POST /api/stations/calculate-fare
 // @access  Public (or Private if you want only logged-in users to see it)
@@ -58,3 +66,6 @@ router.post('/calculate-fare', (req, res) => {
 
 module.exports = router;
 
+=======
+module.exports = router;
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1

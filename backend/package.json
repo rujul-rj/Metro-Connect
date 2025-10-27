@@ -16,9 +16,14 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
+<<<<<<< HEAD
     "mongodb": "^6.20.0",
     "mongoose": "^8.19.2",
     "nodemon": "^3.1.10",
     "uuid": "^13.0.0"
+=======
+    "mongoose": "^8.19.2",
+    "nodemon": "^3.1.10"
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1
   }
 }

@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   background: var(--bg-card);
   padding: 1rem 2rem; /* Adjust padding as needed for height */
   border-bottom: 1px solid var(--border-color);
@@ -96,3 +97,38 @@
 .slider:before { position: absolute; content: "☀️"; height: 18px; width: 18px; left: 4px; bottom: 4px; line-height: 18px; text-align: center; font-size: 12px; background-color: white; transition: 0.4s; border-radius: 50%; }
 input:checked + .slider { background-color: var(--color-primary); }
 input:checked + .slider:before { transform: translateX(24px); content: "🌙"; }
+=======
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-purple); /* From your index.css */
+  text-decoration: none;
+}
+.navbar-links a, .navbar-links button {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: 500;
+  cursor: pointer;
+}
+.nav-btn, .nav-btn-primary {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: var(--font-main);
+  font-size: 1rem;
+}
+.nav-btn {
+  background: #f0f0f0;
+  color: var(--color-dark);
+}
+.nav-btn-primary {
+  background: var(--color-purple);
+  color: #fff;
+}
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1

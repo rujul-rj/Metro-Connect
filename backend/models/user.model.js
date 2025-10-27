@@ -1,4 +1,5 @@
 // backend/models/user.model.js
+<<<<<<< HEAD
 console.log("LOG: user.model.js file loading..."); // Debug Log
 
 const mongoose = require('mongoose');
@@ -39,9 +40,44 @@ userSchema.pre('save', async function(next) {
   } catch (error) {
     next(error); // Pass error to Mongoose
   }
+=======
+
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const userSchema = new Schema({
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+    trim: true,
+    minlength: 3
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    trim: true
+  },
+  password: {
+    type: String,
+    required: true,
+    minlength: 6
+  },
+  metroMoneyBalance: {
+    type: Number,
+    default: 0
+  }
+}, {
+  timestamps: true,
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1
 });
 
 const User = mongoose.model('User', userSchema);
 
+<<<<<<< HEAD
 module.exports = User;
 console.log("LOG: user.model.js finished loading."); // Debug Log
+=======
+module.exports = User;
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1

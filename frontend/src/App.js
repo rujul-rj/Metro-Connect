@@ -1,4 +1,5 @@
 // frontend/src/App.js
+<<<<<<< HEAD
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
@@ -18,10 +19,21 @@ import LostFoundPage from './components/LostFoundPage';
 // --- END OF IMPORTS ---
 
 import './App.css'; // Global App styles
+=======
+
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import StationHub from './components/StationHub';
+import Register from './components/Register'; // <-- IMPORT
+import Login from './components/Login'; // <-- IMPORT
+import Navbar from './components/Navbar'; // <-- IMPORT
+import './App.css'; 
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1
 
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
       {/* Navbar is always visible */}
       <Navbar />
 
@@ -49,11 +61,71 @@ function App() {
           {/* Optional: Add a 404 Not Found route */}
           {/* <Route path="*" element={<NotFoundPage />} /> */}
 
+=======
+      <Navbar /> {/* <-- Your navigation bar will be on every page */}
+      
+      <main className="container">
+        <Routes>
+          <Route path="/" element={<StationHub />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          {/* You will add more routes here, like /fare-calculator */}
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1
         </Routes>
       </main>
     </div>
   );
 }
 
+<<<<<<< HEAD
 export default App;
 
+=======
+// You can add this to App.css to make it look clean
+/*
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+*/
+
+export default App;
+// You can create App.css to style the header
+// frontend/src/App.css
+/*
+.app-header {
+  background: var(--color-red);
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+*/
+
+
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
+
+// export default App;
+>>>>>>> f2cee92c094d2c6df22d0f22bc55c8592bdbe6e1
